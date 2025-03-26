@@ -19,9 +19,12 @@ from django.urls import path
 #add1
 import home.views
 import main.views
+import loading.views
 #add2
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home.views.goHome, name='home'),
     path("main/", main.views.goMain, name='main'),
+    path('loading/', loading.views.goLoading, name='loading'),
+
 ]

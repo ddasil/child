@@ -8,13 +8,14 @@ function updateValue(spanId, value) {
   document.getElementById(spanId).textContent = value;
 }
 
-function validateForm() {
+function validateForm(event) {
+  event.preventDefault(); // 기본 폼 제출 동작 방지
+
   const form = document.getElementById("evaluationForm");
 
-  // HTML5 기본 유효성 검사
   if (form.checkValidity()) {
     alert("모든 질문에 답변했습니다. 다음 페이지로 이동합니다.");
-    window.location.href = "로딩.html"; // 다음 페이지 URL로 변경
+    window.location.href = "/loading/";
   } else {
     alert("모든 질문에 답변해주세요!");
   }

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로딩 페이지</title>
+    <link href="{% static 'loading.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div id="bg">
+        
+    </div> <!-- 배경 -->
+    
+    <!-- 상단 헤더 -->
+    <header>
+        <h2 class="header-text">결과 확인하기</h2>
+    </header>
+
+    <!-- 로딩 화면 -->
+    <div class="text-box">
+        <h1>아이들은 사랑입니다</h1>
+        <p>아이를 지켜주세요</p>
+        <p>당신의 관심이 아이를 살립니다</p>
+    </div>
+    <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <!-- 버튼 컨테이너 -->
+    <div id="result-button-container" style="display: none; text-align: center;">
+        <button id="result-button" onclick="redirect()">결과 확인하기</button>
+    </div>
+
+    <script>
+        let progressBar = document.getElementById('progress-bar');
+        let progress = 0;
+
+        // 로딩 바 업데이트
+        function updateProgressBar() {
+            if (progress < 100) {
+                progress += 1;
+                progressBar.style.width = progress + '%';
+                setTimeout(updateProgressBar, 50); // 로딩 속도 조절
+            } else {
+                showResultButton(); // 로딩 완료 후 버튼 표시
+            }
+        }
+
+        // 로딩 완료 후 버튼 표시
+        function showResultButton() {
+            document.getElementById('result-button-container').style.display = 'block';
+        }
+
+        // 페이지 이동
+        function redirect() {
+            window.location.href = '다음페이지.html'; // 이동할 페이지 경로 설정
+        }
+
+        // 페이지 로드 시 로딩 시작
+        window.onload = updateProgressBar;
+    </script>
+    <script src="{% static 'loading.js' %}"></script>
+</body>
