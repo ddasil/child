@@ -1,1 +1,147 @@
-<h1>main으로 이동함</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>어린이집</title>
+  <link href="{% static 'child.css' %}" rel="stylesheet">
+
+</head>
+<body>
+  <!-- 백그라운드 -->
+<section id="bg"></section>
+
+  <!-- 로고 -->
+  <div id="container">
+    <div class="text">
+      <div>K
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+      </div>
+      <div>i
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+      </div>
+      <div>ds
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+      </div>
+    </div>
+
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <form id="evaluationForm">
+
+      <h2>아동 보호 평가</h2>
+      <!-- 필수 입력: 이름, 나이, 성별 -->
+      <div class="input-group">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="input-group">
+        <label for="age">나이:</label>
+        <input type="number" id="age" name="age"  min="1" step="1" oninput="validity.valid||(value='');" required>
+      </div>
+
+      <div class="input-group">
+        <label>성별:</label>
+        <label><input type="radio" name="gender" value="male" required> 남</label>
+        <label><input type="radio" name="gender" value="female"> 여</label>
+      </div>
+
+      <hr>
+
+      <!-- 라디오 버튼 항목 -->
+      <div class="radio-group">
+        <label>멍 여부:</label>
+        <label><input type="radio" name="bruise" value="none"> 없음</label>
+        <label><input type="radio" name="bruise" value="yes"> 있음</label>
+        <label><input type="radio" name="bruise" value="unknown"> 모름</label>
+      </div>
+
+      <div class="slider-group">
+        <label for="fracture">골절 여부:</label>
+        <input type="range" id="fracture" name="fracture" min="0" max="9" step="1" value="0" oninput="updateValue('fractureValue', this.value)">
+        <span id="fractureValue">0</span>
+      </div>
+
+      <div class="radio-group">
+        <label>영양실조:</label>
+        <label><input type="radio" name="malnutrition" value="none"> 없음</label>
+        <label><input type="radio" name="malnutrition" value="yes"> 있음</label>
+        <label><input type="radio" name="malnutrition" value="unknown"> 모름</label>
+      </div>
+
+      <div class="radio-group">
+        <label>위생 상태:</label>
+        <label><input type="radio" name="hygiene" value="poor"> 불량</label>
+        <label><input type="radio" name="hygiene" value="average"> 중간</label>
+        <label><input type="radio" name="hygiene" value="clean"> 깨끗</label>
+      </div>
+
+      <div class="radio-group">
+        <label>머리 부상 여부:</label>
+        <label><input type="radio" name="head_injury" value="none"> 없음</label>
+        <label><input type="radio" name="head_injury" value="yes"> 있음</label>
+        <label><input type="radio" name="head_injury" value="unknown"> 모름</label>
+      </div>
+
+      <div class="radio-group">
+        <label>자해 흔적 여부:</label>
+        <label><input type="radio" name="self_harm" value="none"> 없음</label>
+        <label><input type="radio" name="self_harm" value="yes"> 있음</label>
+        <label><input type="radio" name="self_harm" value="unknown"> 모름</label>
+      </div>
+
+      <div class="radio-group">
+        <label>가정 내 폭력 여부:</label>
+        <label><input type="radio" name="domestic_violence" value="none"> 없음</label>
+        <label><input type="radio" name="domestic_violence" value="yes"> 있음</label>
+        <label><input type="radio" name="domestic_violence" value="unknown"> 모름</label>
+      </div>
+
+      <div class="slider-group">
+        <label for="abuse_reports">과거 학대 신고 횟수:</label>
+        <input type="range" id="abuse_reports" name="abuse_reports" min="0" max="10" step="1" value="0" oninput="updateValue('abuseReportsValue', this.value)">
+        <span id="abuseReportsValue">0</span>
+      </div>
+
+      <button type="submit" class="submit-btn" onclick="validateForm()">제출</button>
+    </form>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'child.js' %}"></script>
+
+</body>
+</html>
