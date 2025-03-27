@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>어린이집</title>
+  <link href="{% static 'signup.css' %}" rel="stylesheet">
+</head>
+<body>
+  <form id="signup">
+    <fieldset>
+      <legend>회원 가입</legend>
+      <ul>
+        <li>
+          <label for="userid">아이디</label>
+          <input id="userid" name="userid" type="text" required autofocus>
+        </li>
+        <li>
+          <label for="pwd1">비밀번호</label>
+          <input id="pwd1" name="pwd1" type="password"  required>
+        </li>
+        <li>
+          <label for="pwd2">비밀번호 확인</label>
+          <input id="pwd2" name="pwd2" type="password" required>
+        </li>  
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>개인 정보</legend>
+      <ul>
+        <li>
+          <label for="fullname">이름</label>
+          <input id="fullname" name="fullname" type="text" placeholder="5자미만 공백없이" required>
+        </li>
+        <li>
+            <label for="userid">주민등록번호</label>
+            <input id="userid" name="userid" type="text" required autofocus>
+          </li>
+        <li>
+          <label for="email">메일 주소</label>
+          <input id="email" name="email" type="email" placeholder="abcd@domain.com" required autocomplete="off">
+        </li>
+        <li>
+          <label for="tel">연락처</label>
+          <input id="tel" name="tel" type="tel"  required autocomplete="off">
+        </li>  
+        <li>
+          <label for="daycare-name">어린이집 이름</label>
+          <input id="daycare-name" name="daycare-name" type="text" required autocomplete="off">
+        </li>
+        <li> 
+          <label for="daycare-address">어린이집 주소</label>
+          <input id="daycare-address" name="daycare-address" type="text" required autocomplete="off"  placeholder="주소 입력 (예: 서울시 관악구)">
+        </li>
+        <li>
+          <label for="daycare-phone">어린이집 번호</label>
+          <input id="daycare-phone" name="daycare-phone" type="tel" required autocomplete="off" pattern="^\d{2,3}\d{3,4}\d{4}$" placeholder="전화번호 입력 (예: 01012345678)">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <button type="submit"> 제출 </button> 
+    </fieldset>
+  </form>
+
+
+
+  <script src="{% static 'signup.js' %}"></script>
+  
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,11 +1,12 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+  {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>home</title>
   <link href="{% static 'home.css' %}" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
@@ -53,10 +54,14 @@
     </div>
 </div>
 
-<!-- 로그인버튼 -->
+<!-- 로그인 및 회원가입버튼 -->
 <div class="button-container">
-  <button class="learn-more" onclick="goBack()">Sign In</button>
-  <button class="learn-more" onclick="goToSignup()">Sign Up</button>
+  <a href="{% url 'login' %}">
+    <button class="learn-more">Sign In</button>
+  </a>  
+  <a href="{% url 'signup' %}">
+    <button class="learn-more" onclick="goToSignup()">Sign Up</button>
+  </a>
 </div>
 
 <!-- main 화면 이동 버튼 -->
@@ -96,6 +101,6 @@
   </figure>
 </div>
 
-<script src="{% static 'home.js' %}"></script>
+  <script src="{% static 'home.js' %}"></script>
 </body>
 </html>

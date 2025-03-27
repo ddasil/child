@@ -18,15 +18,16 @@ function restartPage() {
   // 현재 페이지를 다시 로드합니다.
   window.location.reload();
 }
-// 로그인버튼
-function goBack() {
-  window.location.href = "/signon/"; // 로그인 페이지로 이동
-}
+//로그인버튼
+//function goBack() {
+//console.log("Sign In 버튼 클릭됨"); // 디버깅 로그
+//window.location.href = "/login/"; // 로그인 페이지로 이동
+// }
 
 //회원가입 버튼
-function goToSignup() {
-  window.location.href = "/signup/"; // 회원가입 페이지로 이동
-}
+//function goToSignup() {
+//window.location.href = "/signup/"; // 회원가입 페이지로 이동
+// }
 
 //로그아웃 버튼
 function goToSignout() {

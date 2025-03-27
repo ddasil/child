@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'login.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body>
+    
+  <!-- 로고 -->
+  <div id="container">
+    <a href="{% url 'home' %}">
+    <div class="text">
+      <div>K
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+      </div>
+      <div>i
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+      </div>
+      <div>ds
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+      </div>
+    </div>
+    </div>
+  </a>
+</div>
+    <form>
+  
+        <div class="segment">
+          <h1>Sign up</h1>
+        </div>
+        
+
+        <div id="login-container">
+            <label>
+              <input id="loginUserid" type="text" placeholder="아이디" required />
+            </label>
+            <label>
+              <input id="loginPwd" type="password" placeholder="Password" required />
+            </label>
+            <button class="red" id="loginButton"><i class="icon ion-md-lock"></i> Log in</button>
+          </div>
+          
+        <div id="button-container">
+            <div id="button-back">
+              <a href="{% url 'home' %}">
+              <button class="unit" type="button" onclick="navigateToBack()"></a>
+                <i class="icon ion-arrow-left-b"></i>
+              </button>
+              <span id="tooltip-back">뒤로가기</span>
+            </div>
+            <div id="button-signup">
+              <button class="unit" type="button" onclick="navigateToSignup()">
+                <i class="icon ion-md-settings"></i>
+              </button>
+              <span id="tooltip-signup">회원가입</span>
+            </div>
+          </div>
+    </form>
+      
+
+        <script src="{% static 'login.js' %}"></script>
+        
+
+
+</body>
+</html>
