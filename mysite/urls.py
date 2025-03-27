@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from login import views as login_views
 
 #add1
 import home.views
+import home2.views
 import main.views
 import loading.views
 import login.views
@@ -30,6 +32,7 @@ import signup.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home.views.goHome, name='home'), #홈 페이지
+    path("home2/", home2.views.goHome2, name='home2'), #홈 페이지
     path("main/", main.views.goMain, name='main'), # 아동학대 위험 진단 페이지
     path('loading/', loading.views.goLoading, name='loading'), # 로딩 페이지
     path('login/', login.views.goLogin, name='login'), # 로그인 페이지

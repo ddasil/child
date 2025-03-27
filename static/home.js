@@ -42,7 +42,3 @@ $(".hover").mouseleave(
   }
 );
 
-// 아동학대 위험 진단 버튼
-function goToMain() {
-  window.location.href = "/main/"; // 메인 페이지로 이동
-}

@@ -55,42 +55,52 @@
     </div>
   </a>
 </div>
-    <form>
-  
-        <div class="segment">
-          <h1>Sign up</h1>
-        </div>
-        
+<form method="post">
+  {% csrf_token %}
+  <div class="segment">
+    <h1>Sign In</h1>
+  </div>
 
-        <div id="login-container">
-            <label>
-              <input id="loginUserid" type="text" placeholder="아이디" required />
-            </label>
-            <label>
-              <input id="loginPwd" type="password" placeholder="Password" required />
-            </label>
-            <button class="red" id="loginButton"><i class="icon ion-md-lock"></i> Log in</button>
-          </div>
+  <div id="login-container">
+    <label>
+      <input type="text" name="username" placeholder="아이디" required />
+    </label>
+    <label>
+      <input type="password" name="password" placeholder="비밀번호" required />
+    </label>
+    <button class="red" type="submit">
+      <i class="icon ion-md-lock"></i> Log in
+    </button>
+  </div>
+
+  {% if error %}
+    <p style="color: red; text-align: center;">{{ error }}</p>
+  {% endif %}
+</form>
           
-        <div id="button-container">
-            <div id="button-back">
-              <a href="{% url 'home' %}">
-              <button class="unit" type="button" onclick="navigateToBack()"></a>
-                <i class="icon ion-arrow-left-b"></i>
-              </button>
-              <span id="tooltip-back">뒤로가기</span>
-            </div>
-            <div id="button-signup">
-              <button class="unit" type="button" onclick="navigateToSignup()">
-                <i class="icon ion-md-settings"></i>
-              </button>
-              <span id="tooltip-signup">회원가입</span>
-            </div>
-          </div>
-    </form>
+<!-- 아래는 form 바깥! -->
+<div id="button-container">
+  <!-- 뒤로가기 버튼 -->
+  <div id="button-back">
+    <a href="{% url 'home' %}">
+      <button class="unit" type="button">
+        <i class="icon ion-md-arrow-back"></i>
+      </button>
+    </a>
+    <span id="tooltip-back">뒤로가기</span>
+  </div>
+
+  <!-- 회원가입 버튼 -->
+  <div id="button-signup">
+    <a href="{% url 'signup' %}" class="unit">
+      <i class="icon ion-md-person-add"></i>
+    </a>
+    <span id="tooltip-signup">회원가입</span>
+  </div>
+</div>
       
 
-        <script src="{% static 'login.js' %}"></script>
+<script src="{% static 'login.js' %}"></script>
         
 
 

@@ -978,7 +978,9 @@ body, html {
   form {
     padding: 16px; /* $ruler */
     width: 320px; /* $ruler * 20 */
-    margin: 0 auto;
+    margin: 10px auto;
+    margin-top: 10px; /* 이 값을 줄이면 Sign up이 위로 올라옴 */
+  
   }
   .segment {
     padding: 32px 0; /* $ruler * 2 */

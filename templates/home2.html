@@ -1,12 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  {% load static %}
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>home</title>
+  <title>home2</title>
   <link href="{% static 'home.css' %}" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
@@ -14,8 +13,8 @@
 <section id="bg"></section>
 
 <!-- 로고 -->
-<div id="container" onclick="restartPage()">
-  <div class="text">
+<div id="container">
+  <div class="text" onclick="restartPage()">
     <div>K
       <div>K</div>
       <div>K</div>
@@ -52,28 +51,20 @@
       <div>ds</div>
       <div>ds</div>
     </div>
+  
 </div>
 
-<!-- 로그인 및 회원가입버튼 -->
+<!-- 로그아웃버튼 -->
 <div class="button-container">
-  <a href="{% url 'login' %}">
-    <button class="learn-more">Sign In</button>
-  </a>  
-  <a href="{% url 'signup' %}">
-    <button class="learn-more" onclick="goToSignup()">Sign Up</button>
-  </a>
+  <a href="{% url 'home' %}">
+  <button class="learn-more">Sign Out</button></a>
 </div>
 
 <!-- main 화면 이동 버튼 -->
  
 <div class="main-button-container">
-  {% if user.is_authenticated %}
-    <a href="{% url 'main' %}">
-      <button class="main-button">🔎 아동학대 위험 진단</button>
-    </a>
-  {% else %}
-    <button class="main-button" onclick="showLoginPopup()">🔎 아동학대 위험 진단</button>
-  {% endif %}
+  <a href="{% url 'main' %}">
+    <button class="main-button">🔎 아동학대 위험 진단 </button></a>
 </div>
 
 <!-- 배경이미지 -->
@@ -106,24 +97,6 @@
 </div>
 
 <script src="{% static 'home.js' %}"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-  function showLoginPopup() {
-    Swal.fire({
-      icon: 'warning',
-      title: '로그인이 필요합니다',
-      text: '로그인 후 이용 가능합니다.',
-      confirmButtonText: '로그인하기',
-      showCancelButton: true,
-      cancelButtonText: '취소'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        window.location.href = "{% url 'login' %}";
-      }
-    });
-  }
-</script>
-
 
 </body>
 </html>
