@@ -1,5 +1,101 @@
 {% load static %}
-<h1>home입니다</h1>
-<a href="{% url 'main' %}"><button>main으로 이동하는 버튼</button></a>
-<img src="{% static 'images/children.png' %}" alt="로고">
-fddffdgfdgfgdfffgfdgfgfgfd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home</title>
+  <link href="{% static 'home.css' %}" rel="stylesheet">
+
+</head>
+<body>
+<!-- 백그라운드 -->
+<section id="bg"></section>
+
+<!-- 로고 -->
+<div id="container" onclick="restartPage()">
+  <div class="text">
+    <div>K
+      <div>K</div>
+      <div>K</div>
+      <div>K</div>
+      <div>K</div>
+      <div>K</div>
+      <div>K</div>
+      <div>K</div>
+      <div>K</div>
+      <div>K</div>
+      <div>K</div>
+    </div>
+    <div>i
+      <div>i</div>
+      <div>i</div>
+      <div>i</div>
+      <div>i</div>
+      <div>i</div>
+      <div>i</div>
+      <div>i</div>
+      <div>i</div>
+      <div>i</div>
+      <div>i</div>
+    </div>
+    <div>ds
+      <div>ds</div>
+      <div>ds</div>
+      <div>ds</div>
+      <div>ds</div>
+      <div>ds</div>
+      <div>ds</div>
+      <div>ds</div>
+      <div>ds</div>
+      <div>ds</div>
+      <div>ds</div>
+    </div>
+</div>
+
+<!-- 로그인버튼 -->
+<div class="button-container">
+  <button class="learn-more" onclick="goBack()">Sign In</button>
+  <button class="learn-more" onclick="goToSignup()">Sign Up</button>
+</div>
+
+<!-- main 화면 이동 버튼 -->
+ 
+<div class="main-button-container">
+  <a href="{% url 'main' %}">
+    <button class="main-button">🔎 아동학대 위험 진단</button>
+  </a>
+</div>
+
+<!-- 배경이미지 -->
+<div class="gallery">
+  <figure class="snip1425">
+    <img src="{% static 'images/child1.jpg' %}" alt="child1" />
+    <figcaption><i class="ion-podium"></i>
+      <h4>어린이 날</h4>
+      <h2>2025년 5월 5일</h2>
+      <p>아동에게 따뜻한 사랑을 선물합시다.</p>
+    </figcaption>
+    <a href="https://ncrc.or.kr/ncrc/main.do"></a>
+  </figure>
+  <figure class="snip1425"><img src="{% static 'images/child2.jpg' %}" alt="child2" />
+    <figcaption><i class="ion-earth"></i>
+      <h4>아동학대 예방의 날</h4>
+      <h2>2025년 11월 6일</h2>
+      <p>아동에게 행복한 미래를 선물합시다.</p>
+    </figcaption>
+    <a href="https://ncrc.or.kr/ncrc/cm/cntnts/cntntsView.do?mi=1411&cntntsId=1355"></a>
+  </figure>
+  <figure class="snip1425"><img src="{% static 'images/child3.jpg' %}" alt="child3" />
+    <figcaption><i class="ion-university"></i>
+      <h4>세계 실종아동의 날</h4>
+      <h2>2025년 5월 25일</h2>
+      <p>아동이 안전한 세상을 만들어갑시다.</p>
+    </figcaption>
+    <a href="https://www.missingchild.or.kr/home/main.do"></a>
+  </figure>
+</div>
+
+<script src="{% static 'home.js' %}"></script>
+</body>
+</html>
