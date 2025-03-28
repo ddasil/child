@@ -1,7 +1,10 @@
 // 서버 응답에서 받은 머신러닝 예측 결과
+const min = 40;
+const max = 80;
+
 const predictionResponse = {
-  score: 63, // 예측 점수
-  recommendation: `즉시 관련 기관에 신고하거나 전문가의 도움을 요청하세요.`, // 권장 사항
+  score: Math.floor(Math.random() * (max - min + 1)) + min,
+  recommendation: `즉시 관련 기관에 신고하거나 전문가의 도움을 요청하세요.`,
 };
 
 // 결과를 보여줄 HTML 요소
