@@ -1,3 +1,8 @@
+//로고 버튼 재시작
+function restartPage() {
+  // 현재 페이지를 다시 로드합니다.
+  window.location.reload();
+}
 
 //검색
 const button = document.querySelector('.search-button');
