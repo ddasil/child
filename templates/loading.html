@@ -42,7 +42,7 @@
             if (progress < 100) {
                 progress += 1;
                 progressBar.style.width = progress + '%';
-                setTimeout(updateProgressBar, 50); // 로딩 속도 조절
+                setTimeout(updateProgressBar, 20); // 로딩 속도 조절
             } else {
                 showResultButton(); // 로딩 완료 후 버튼 표시
             }
