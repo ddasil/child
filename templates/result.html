@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>예측 결과</title>
+      <link href="{% static 'result.css' %}" rel="stylesheet">
+
+  <!-- 백그라운드 -->
+<section id="bg"></section>
+
+  <!-- 로고 -->
+  <div id="container">
+    <a href="{% url 'home2' %}">
+    <div class="text">
+      <div>K
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+        <div>K</div>
+      </div>
+      <div>i
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+        <div>i</div>
+      </div>
+      <div>ds
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+        <div>ds</div>
+      </div>
+    </div>
+    </a>
+</div>
+
+</head>
+<body>
+ <!-- 결과 및 설명 -->
+
+
+
+ <div class="result-box">
+  <div id="resultText"></div>
+</div>
+<div class="result-box2">
+  <div id="instructionsText"></div>
+</div>
+
+
+
+
+<a href="{% url 'home2' %}">
+  <button class="back-button learn-more">home</button>
+</a>
+
+<div class="tabs">
+  <div class="tab-header">
+    <div class="active">
+      <i class="fa fa-code"></i> 아동학대란?
+    </div>
+    <div>
+      <i class="fa fa-pencil-square"></i> 관련 법률
+    </div>
+    <div>
+      <i class="fa fa-bar-chart"></i> 신고 방법
+    </div>
+
+  </div>
+  <div class="tab-indicator"></div>
+  <div class="tab-content">
+    
+    <div class="active">
+      <i class="fa fa-code"></i>
+      <h2>아동학대란?</h2>
+      <p>    아동학대란, 보호자나 성인이 아동에게 신체적, 정신적, <br>성적 폭력을 가하거나, 아동을 돌보지 않고 유기하거나 <br>방임하는 행위를 말합니다. 이는 아동의 건강과 안전을 <br>심각하게 위협하며, 사회적 관심과 책임이 요구되는 문제입니다.</p>
+
+    </div>
+    
+    <div>
+      <i class="fa fa-pencil-square"></i>
+      <h2>아동 학대 관련 법률</h2>
+      <p>아동복지법 제45조에 근거하여 학대 받은 아동을 발견, 보호, <br>치료하는 전문서비스가 제공됩니다. <br>
+        아동복지법 제25조제2항에 따라 직무상 아동학대를 알게 된 사람은 즉시 아동보호전문기관 또는 수사기관에 신고해야 합니다. <br>
+        아동복지법에 따르면 아동학대관련범죄로 형 또는 치료감호를 선고받아 확정된 사람은 일정 기간 아동관련기관을 운영하거나 해당 기관에 취업할 수 없습니다. <br>
+      </p>    
+    </div>
+    
+    <div>
+      <i class="fa fa-bar-chart"></i>
+      <h2>아동학대 신고 방법</h2>
+      <p>국번없이 112로 전화,<br>
+        모바일 앱 아이지킴콜을 이용,<br>
+        관할 경찰서, 시·군·구를 방문</p>
+    </div>
+    
+
+    
+  </div>
+</div>
+
+
+
+
+<script src="{% static 'result.js' %}"></script>
+</body>
+</html>

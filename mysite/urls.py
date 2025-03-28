@@ -25,6 +25,7 @@ import main.views
 import loading.views
 import login.views
 import signup.views
+import result.views
 # from . import views
 #add2
 
@@ -37,6 +38,7 @@ urlpatterns = [
     path('loading/', loading.views.goLoading, name='loading'), # 로딩 페이지
     path('login/', login.views.goLogin, name='login'), # 로그인 페이지
     path('signup/', signup.views.goSignup, name='signup'), # 회원가입 페이지
+    path('result/', result.views.goResult, name='result'), # 회원가입 페이지
 
 
 ]

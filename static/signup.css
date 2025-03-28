@@ -78,7 +78,7 @@ h1 {
     border:1px solid #ffffff;
     border-radius: 5px;
     padding: 20px;
-    width: 400px;	
+    width: 400px;   
     margin:30px auto;
   }
       
@@ -91,7 +91,7 @@ h1 {
     font-size: 16px;
     font-weight: bold;
     padding-left:5px;
-    padding-bottom: 10px;	
+    padding-bottom: 10px;   
   }
   
   #signup ul li {
@@ -101,7 +101,7 @@ h1 {
     margin-bottom: 2px;
   }
         
-  #signup button {	
+  #signup button {   
     border: 1px solid #222;
     border-radius: 20px;
     display: block;
@@ -123,7 +123,7 @@ h1 {
     font-size: 13px;  
     padding: 5px;  
     width: 200px;  
-  }					
+  }               
   
   #signup input[required] {  
     border:1px red solid;
@@ -142,3 +142,51 @@ h1 {
     background-color:#222;  
     color:#fff; 
   } 
+  /* 버튼 컨테이너 스타일 */
+.button-container {
+  display: flex;
+  justify-content: center;  /* 버튼을 가운데 정렬 */
+  gap: 10px;  /* 버튼 간격 */
+  margin-top: 15px;
+}
+
+/* 버튼 기본 스타일 */
+.button-container button {
+  background-color: #f8f9fa;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* 버튼 hover 효과 */
+.button-container button:hover {
+  background-color: #e9ecef;
+  border-color: #ccc;
+}
+
+/* 제출 버튼 스타일 */
+.submit-button {
+  background-color: #007bff;
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+/* 제출 버튼 hover 효과 */
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* 돌아가기 버튼 스타일 */
+.back-button {
+  background-color: #6c757d;
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+/* 돌아가기 버튼 hover 효과 */
+.back-button:hover {
+  background-color: #545b62;
+}

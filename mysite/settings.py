@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'loading',
     'login',
     'signup',
+    'result',
 ]
 
 MIDDLEWARE = [

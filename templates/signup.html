@@ -60,17 +60,20 @@
         </li>
       </ul>
     </fieldset>
-    <fieldset>
-      <button type="submit"> 제출 </button> 
-    </fieldset>
-  </form>
-
-
+  
+  <div class="button-container">
+    <a href="{% url 'loading' %}">
+      <button type="submit" class="submit-button">제출</button>
+    </a>
+    
+    <a href="{% url 'home' %}">
+      <button type="button" class="back-button">돌아가기</button>
+    </a>
+  </div>
+</form>
 
   <script src="{% static 'signup.js' %}"></script>
   
-
-
     </div>
 </div>
 
